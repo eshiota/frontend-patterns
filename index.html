@@ -10,7 +10,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>HTML & CSS Good Practices and Tips</title>
+  <title>Front-end Best Practices and Patterns</title>
   <meta name="description" content="A website with a list of good practices and HTML/CSS tips" />
   <meta name="author" content="Eduardo Shiota Yasuda (contato@eshiota.com)" />
 
@@ -19,7 +19,94 @@
 
 <body>
   <div id="container">
-    HTML & CSS Good Practices and Tips
+    <h1>Front-end Best Practices and Patterns</h1>
+
+    <section>
+      <h2>Patterns</h2>
+
+      <section class="pseudo-element-decoration">
+        <h3>Using pseudo-elements as decoration</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        </p>
+
+        <p>
+          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        </p>
+      </section>
+
+      <section class="floatless-block-lists">
+        <h3>Block lists without floats</h3>
+
+        <h4>These use floats</h4>
+
+        <div class="float-list">
+          <ul>
+            <li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="60" />
+            </li>
+
+            <li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="70" />
+            </li>
+
+            <li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="80" />
+            </li>
+          </ul>
+        </div>
+
+        <h4>These use inline-block</h4>
+
+        <div class="floatless-list">
+          <ul>
+            <li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="60" />
+            </li><!--
+
+            --><li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="70" />
+            </li><!--
+
+            --><li>
+              <img src="images/oliver.jpg" alt="Oliver The Cat" width="60" height="80" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="pretty-buttons">
+        <h3>Pretty CSS3 Buttons</h3>
+
+        <a href="#" class="pretty-bt">Click me, I'm so pretty!</a>
+
+        <a href="#" class="pretty-bt large-bt">You must click me!</a>
+
+        <a href="#" class="pretty-bt confirmation-bt">Submit awesomeness</a>
+
+        <a href="#" class="pretty-bt confirmation-bt large-bt">Submit both large and awesomeness</a>
+      </section>
+
+      <section class="shadow-tricks">
+        <h3>Shadow tricks</h3>
+
+        <div class="polaroid-shadow">
+          <img src="images/oliver.jpg" alt="Oliver The Cat" />
+        </div>
+      </section>
+
+      <section class="retro-text">
+        <h3>Retro text</h3>
+
+        <p class="retro">OMG that's so... Word Art?</p>
+      </section>
+    </section>
+
   </div>
 
   <script src="javascripts/jquery-1.7.2.js"></script>

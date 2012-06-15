@@ -35,20 +35,25 @@ footer, header, hgroup, menu, nav, section { display: block; }
 body {
   font: normal normal 100%/1.5 sans-serif;
   color: #333;
+  padding: 20px;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-weight: bold;
-  font-size: 32px;
-  line-height: 42px;
-  margin-bottom: 16px;
+  line-height: 1.3;
+  margin-bottom: .8em;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 36px;
-  margin-bottom: 22px;
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.25em; }
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 1.5em;
 }
 
 
@@ -57,15 +62,189 @@ h2 {
 *********************************************************************/
 
 #container {
-  width: 960px;
+  width: 640px;
   margin: 0 auto;
+}
+
+#container section section {
+  margin-bottom: 3em;
 }
 
 
 /*********************************************************************
-*  =Title
+*  =Pattern - Pseudo-element Decoration
 *********************************************************************/
 
-/* ==Subtitle
-**********************************************/
+.pseudo-element-decoration p {
+  padding: 15px;
+  background: #ececec;
+  position: relative;
+  margin-bottom: 5.625em;
+}
 
+.pseudo-element-decoration p:after {
+  content: "";
+  display: block;
+  width: 49px;
+  height: 42px;
+  background: url(../images/ornament.png);
+  position: absolute;
+  left: 50%;
+  bottom: -4.125em;
+  margin-left: -25px;
+}
+
+.pseudo-element-decoration p:last-child { margin-bottom: 1.5em }
+
+.pseudo-element-decoration p:last-child:after { display: none; }
+
+
+/*********************************************************************
+*  =Pattern - Floatless lists
+*********************************************************************/
+
+.floatless-block-lists ul {
+  list-style: none;
+  list-style-position: outside;
+}
+
+.floatless-block-lists .float-list,
+.floatless-block-lists .floatless-list {
+  background: #ececec;
+  margin-bottom: 1.5em;
+  padding: 15px;
+}
+
+.floatless-block-lists .float-list {
+  overflow: hidden; /* need some sort of clearfix */
+}
+
+.floatless-block-lists .float-list li {
+  float: left;
+  margin-right: 10px;
+}
+
+.floatless-block-lists .floatless-list li {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+
+/*********************************************************************
+*  =Pattern - Pretty CSS3 Buttons
+*********************************************************************/
+.pretty-bt {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 2.5em;
+  height: 2.5em;
+  padding: 0 1em;
+  color: #fff;
+  background: #d31a30; /* Old browsers */
+  background: -webkit-linear-gradient(top, #ff4e5c 0%, #d31a30 83%, #d31a30 100%);
+  background:    -moz-linear-gradient(top, #ff4e5c 0%, #d31a30 83%, #d31a30 100%);
+  background:     -ms-linear-gradient(top, #ff4e5c 0%, #d31a30 83%, #d31a30 100%);
+  background:      -o-linear-gradient(top, #ff4e5c 0%, #d31a30 83%, #d31a30 100%);
+  background:         linear-gradient(top, #ff4e5c 0%, #d31a30 83%, #d31a30 100%);
+  border-bottom: 3px solid #b0101c;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .8),
+               0  1px 0 rgba(255, 255, 255, .2);
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.pretty-bt:active {
+  border-bottom: none;
+  height: 2.25em;
+  line-height: 2.5em;
+  position: relative;
+  top: .25em;
+  box-shadow: none;
+}
+
+/* ==Some decorator classes
+**********************************************/
+.large-bt { font-size: 2em; }
+
+.confirmation-bt {
+  background: #2a792d; /* Old browsers */
+  background: -webkit-linear-gradient(top, #50a053 0%, #2a792d 83%, #2a792d 100%);
+  background:    -moz-linear-gradient(top, #50a053 0%, #2a792d 83%, #2a792d 100%);
+  background:     -ms-linear-gradient(top, #50a053 0%, #2a792d 83%, #2a792d 100%);
+  background:      -o-linear-gradient(top, #50a053 0%, #2a792d 83%, #2a792d 100%);
+  background:         linear-gradient(top, #50a053 0%, #2a792d 83%, #2a792d 100%);
+  border-bottom-color: #0f4d12;
+}
+
+
+/*********************************************************************
+*  =Pattern - Shadow Tricks
+*********************************************************************/
+
+.polaroid-shadow {
+  background: #ececec;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27),
+              0 0  40px rgba(0, 0, 0, 0.1) inset;
+  border: 10px solid #ececec;
+  position: relative;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.polaroid-shadow img {
+  width: 100%;
+  display: block;
+}
+
+.polaroid-shadow:before,
+.polaroid-shadow:after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 3px;
+  bottom: 2px;
+  width: 52%;
+  max-width: 70px;
+  height: 55%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+     -moz-transform: skew(-15deg) rotate(-6deg);
+      -ms-transform: skew(-15deg) rotate(-6deg);
+       -o-transform: skew(-15deg) rotate(-6deg);
+          transform: skew(-15deg) rotate(-6deg);
+}
+
+.polaroid-shadow:after {
+  left: auto;
+  right: 3px;
+  -webkit-transform: skew(15deg) rotate(6deg);
+     -moz-transform: skew(15deg) rotate(6deg);
+      -ms-transform: skew(15deg) rotate(6deg);
+       -o-transform: skew(15deg) rotate(6deg);
+          transform: skew(15deg) rotate(6deg);
+}
+
+
+/*********************************************************************
+*  =Pattern - Retro text
+*********************************************************************/
+.retro {
+  font-weight: bold;
+  font-size: 3em;
+  font-family: "Impact", sans-serif;
+  text-transform: uppercase;
+  color: #ff4e5c;
+  text-shadow: 1px 1px 0 #d31a30,
+               2px 2px 0 #d31a30,
+               3px 3px 0 #d31a30,
+               4px 4px 0 #d31a30,
+               5px 5px 0 #d31a30;
+}
